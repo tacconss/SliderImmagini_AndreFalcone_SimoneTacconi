@@ -30,44 +30,41 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#login">Login</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#admin">test</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
         <!--Immaggini-->
-        <div id="immagini" class="page">
-            <div class="row">
-                <h1 class="display-1">Slider Immagini</h1>
-                <p class="h4">Un progetto portato avanti da Andrea Falcone e Simone Tacconi</h4>
-            </div>
-            <div class="row">
-                <div id="carouselExampleIndicators" class="carousel slide">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div class="page">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner" id="immaginiCarosello">
+                    <div class="carousel-item active">
+                        <img src="https://blog.geografia.deascuola.it/uploads/2023/04/Val-d-Orcia-panorama_1bb3052e3a980627951e300394f187d8.jpg" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1H4PZrSs0p0fQXR6f-IUvezMdjcgxrFjCkg&s" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1H4PZrSs0p0fQXR6f-IUvezMdjcgxrFjCkg&s" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1H4PZrSs0p0fQXR6f-IUvezMdjcgxrFjCkg&s" class="d-block w-100" alt="...">
-                      </div>
+                    <div class="carousel-item">
+                        <img src="https://ilfotografo.it/wp-content/uploads/2022/06/CAN128.lead_.la_fiorita_98159931-1024x683.jpg" class="d-block w-100" alt="...">
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
+                    <div class="carousel-item">
+                        <img src="https://i0.wp.com/fotografinviaggio.it/wp-content/uploads/2023/04/Immagine-copertina-per-blog-1-2-2.jpg?fit=1000%2C662&ssl=1" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.emotionrit.it/wp-content/uploads/2022/08/Perche-un-panorama-ci-colpisce-scaled.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
         <!--Login-->
@@ -89,9 +86,15 @@
         </div>
         <!--Admin-->
         <div id="admin" class="page hidden">
-            <div class="row"><a href="#immagini">Pagina Immagini</a></div>
-            <div class="row"><a href="#login">Login</a></div>
-            <div class="row">Admin</div>
+            <table class="table table-light table-hover">
+                <thead>
+                    <th>Immagine</th>
+                    <th>URL</th>
+                </thead>
+                <tbody id="immaginiTabella">
+                    <!--Lista Immagini-->
+                </tbody>
+            </table>
         </div>
     </div>
 

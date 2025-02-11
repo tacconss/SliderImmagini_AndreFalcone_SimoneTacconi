@@ -28,10 +28,7 @@
                                 <a class="nav-link" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#login">Login</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#admin">test</a>
+                                <a class="nav-link" href="#loginContainer">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -39,7 +36,7 @@
             </nav>
         </div>
         <!--Immaggini-->
-        <div class="page">
+        <div id="immagini" class="page">
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner" id="immaginiCarosello">
                     <div class="carousel-item active">
@@ -67,25 +64,12 @@
                 </button>
             </div>
         </div>
-        <!--Login-->
-        <div id="login" class="page hidden">
-            <form id="loginForm" class="">
-                <div class="mb-3">
-                    <label for="username" id="labelName" class="form-label">Username:</label>
-                    <input type="text" id="username" name="username" placeholder="Andrea, Tommaso, ..."
-                        class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="password" id="labelPassword" class="form-label">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="••••••••" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <button id="submitPassword" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
+        <!--Login-->    
+        <div id="loginContainer" class="page hidden">
+            
         </div>
         <!--Admin-->
-        <div id="admin" class="page hidden">
+        <div id="divPrivate" class="private hidden">
             <table class="table table-light table-hover">
                 <thead>
                     <th>Immagine</th>

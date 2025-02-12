@@ -39,22 +39,7 @@ export const generateLoginComponent = (parentElement) => {
         },
 
         renderForm: () => {
-            const html = `<form id="loginForm" class="form-inline">
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" id="usernameInput" class="form-control" placeholder="Username">
-                                </div>
-                                <div class="col">
-                                    <input type="password" id="passwordInput" class="form-control sm" placeholder="Password">
-                                </div>
-                                <div class="col-4">
-                                    <button type="button" id="loginButton" class="btn btn-primary mb-2">Accedi</button>
-                                </div>
-                                <div id="loginResultLabel"></div>
-                            </div>
-                        </form>`;
-            parentElement.innerHTML = html;
-
+            
             document.getElementById("loginButton").onclick = () => {
                 const username = document.getElementById("usernameInput").value;
                 const password = document.getElementById("passwordInput").value;
@@ -64,7 +49,7 @@ export const generateLoginComponent = (parentElement) => {
                     .then(r => {
                         if (r) {
                             isLogged = true;
-                            sessionStorage.setItem({"Logged": true});
+                            sessionStorage.setItem("Logged", true);
 
                             document.getElementById("loginContainer").classList.remove("visible");
                             document.getElementById("loginContainer").classList.add("hidden");

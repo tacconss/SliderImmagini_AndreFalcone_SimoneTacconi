@@ -28,7 +28,7 @@
                                 <a class="nav-link" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#loginContainer">Login</a>
+                                <a class="nav-link" href="#login">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -64,21 +64,47 @@
                 </button>
             </div>
         </div>
-        <!--Login-->    
-        <div id="loginContainer" class="page hidden">
-            
-        </div>
-        <!--Admin-->
-        <div id="divPrivate" class="private hidden">
-            <table class="table table-light table-hover">
-                <thead>
-                    <th>Immagine</th>
-                    <th>URL</th>
-                </thead>
-                <tbody id="immaginiTabella">
-                    <!--Lista Immagini-->
-                </tbody>
-            </table>
+        <div id="login" class="page hidden">
+            <!--Login-->    
+            <div id="loginContainer" class="">
+                <form id="loginForm" class="form-inline">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" id="usernameInput" class="form-control" placeholder="Username">
+                        </div>
+                        <div class="col">
+                            <input type="password" id="passwordInput" class="form-control sm" placeholder="Password">
+                        </div>
+                        <div class="col-4">
+                            <button type="button" id="loginButton" class="btn btn-primary mb-2">Accedi</button>
+                        </div>
+                        <div id="loginResultLabel"></div>
+                    </div>
+                </form>
+            </div>
+            <!--Admin-->
+            <div id="divPrivate" class="private hidden">
+                <form id="aggiungiImmagini" class="form-inline">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" id="imageLink" class="form-control" placeholder="https://textexample.com/...">
+                        </div>
+                        <div class="col-4">
+                            <button type="button" id="imageButton" class="btn btn-primary mb-2">Carica</button>
+                        </div>
+                        <div id="loginResultLabel"></div>
+                    </div>
+                </form>
+                <table class="table table-light table-hover">
+                    <thead>
+                        <th>Immagine</th>
+                        <th>URL</th>
+                    </thead>
+                    <tbody id="immaginiTabella">
+                        <!--Lista Immagini-->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 

@@ -1,10 +1,10 @@
 export const uploadImage = async () => {
-    const inputFile = document.querySelector('#imageLink'); 
-    const button = document.querySelector("#imageButton");
+    const inputFile = document.querySelector('#file');
+    const button = document.querySelector("#button");
     const link = document.querySelector("#link");
     const fileListContainer = document.querySelector("#fileList");
 
-
+   
     const loadFileList =  () => {
             fetch("/filelist")
                 .then(res => {return res.json();})
@@ -18,14 +18,14 @@ export const uploadImage = async () => {
     const handleSubmit = async () => {
         const formData = new FormData();
         formData.append("file", inputFile.files[0]);
-
+            console.log("fancooolooo");
         try {
             const res = await fetch("/upload", {
                 method: 'POST',
                 body: formData
             });
             const data = await res.json();
-            link.href = data.url;
+            //link.href = data.url;
             loadFileList();
         } catch (e) {
             console.log(e);

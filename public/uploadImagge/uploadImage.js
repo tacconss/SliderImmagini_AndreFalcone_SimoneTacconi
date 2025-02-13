@@ -18,7 +18,6 @@ export const uploadImage = async () => {
     const handleSubmit = async () => {
         const formData = new FormData();
         formData.append("file", inputFile.files[0]);
-            console.log("fancooolooo");
         try {
             const res = await fetch("/upload", {
                 method: 'POST',

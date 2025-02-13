@@ -21,7 +21,6 @@ app.use("/files", express.static(path.join(__dirname, "files")));
 
 app.post('/upload', (req, res) => {
     upload(req, res, (err) => {
-       
         console.log(req.file.filename);    
         res.json({ url: "./files/" + req.file.filename });    
     });
@@ -30,9 +29,7 @@ app.post('/upload', (req, res) => {
 
 app.get('/filelist', (req, res) => {
     const filesDir = path.join(__dirname, "files");
-    
     fs.readdir(filesDir, (err, files) => {
-        
         const fileUrls = files.map(file => `./files/${file}`);
         res.json(fileUrls);
     });

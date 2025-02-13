@@ -1,19 +1,9 @@
-export const uploadImageGenerator = async () => {
+export const generateUploadImage = () => {
 
     const inputFile = document.querySelector('#file');
     const button = document.querySelector("#button");
-    const link = document.querySelector("#link");
-    const fileListContainer = document.querySelector("#fileList");
 
-    const loadFileList =  () => {
-        fetch("/filelist")
-            .then(res => {return res.json();})
-            .then(files => {
-                fileListContainer.innerHTML = files.map(fileUrl =>
-                    `<li><a href="${fileUrl}" target="_blank">${fileUrl}</a></li>`
-                ).join('');
-            });
-    }
+    let list = [];
 
     const handleSubmit = async () => {
         const formData = new FormData();
@@ -24,16 +14,28 @@ export const uploadImageGenerator = async () => {
                 body: formData
             });
             const data = await res.json();
-            loadFileList();
+            list.push(data);
         } catch (e) {
             console.log(e);
         }
+        console.log(list)
     }
 
-    return { 
+    const getFileList = () => {
+        fetch("/filelist")
+            .then(res => {return res.json();})
+            .then(files => { 
+                list = files
+            });
+    }
+
+    return {
         uploadImage: async function() {
             button.onclick = handleSubmit;
-            loadFileList();
+        }, 
+        returnImageList: function() {
+            getFileList();
+            return list;
         }
     }
 };

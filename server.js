@@ -135,7 +135,7 @@ const insert = (todo) => {
       return executeQuery(sql); 
    
    }
-   
+
 const select = () => {
    
       const sql = `
@@ -207,3 +207,11 @@ const server = http.createServer(app);
 server.listen(5600, () => {
   console.log("- server running");
 });
+
+
+
+
+/**
+ * Quando vengono caricate l'immagine, vengono salvate annche su database
+ * nella tabella veingo eliminati devo eliminare pure da database
+ */

@@ -1,5 +1,5 @@
 export const uploadImage = async () => {
-    const inputFile = document.querySelector('#imageLink');
+    const inputFile = document.querySelector('#imageLink'); 
     const button = document.querySelector("#imageButton");
     const link = document.querySelector("#link");
     const fileListContainer = document.querySelector("#fileList");

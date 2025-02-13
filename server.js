@@ -31,7 +31,6 @@ app.post('/upload', (req, res) => {
 app.get('/filelist', (req, res) => {
     const filesDir = path.join(__dirname, "files");
     
-    
     fs.readdir(filesDir, (err, files) => {
         
         const fileUrls = files.map(file => `./files/${file}`);

@@ -10,10 +10,10 @@ export const generateImageCarosel = (parentElement) => {
         render: () => {
             let html = "";
             imgList.forEach((element, index) => {
-                if (index == 1) {
-                    html+='<div class="carousel-item active"><img src="' + element + '" class="d-block w-100" alt="..."></div>';
+                if (index == 0) {
+                    html+='<div class="carousel-item active"><img src="' + element.url + '" class="d-block w-100" alt="..."></div>';
                 } else {
-                    html+='<div class="carousel-item"><img src="' + element + '" class="d-block w-100" alt="..."></div>';
+                    html+='<div class="carousel-item"><img src="' + element.url + '" class="d-block w-100" alt="..."></div>';
                 }
             });
             parentElement.innerHTML = html;
